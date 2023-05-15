@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="weather.js"></script>
+    <link rel="stylesheet" href="weather.css" />
+    <title>WeatherAPI</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="location">
+        <div class="search">
+          <input
+            type="text"
+            id="text"
+            placeholder="City Name..."
+            spellcheck="false"
+          />
+          <button class="search-button" onclick="Alert()">
+            <img src="search.png" />
+          </button>
+        </div>
+      </div>
+      <div class="weather">
+        <img src="weather-forecast.png" class="weather-icon" id="sky" />
+        <div class="main">
+          <h1 class="tmp" id="temp">C°</h1>
+          <h2 class="city" id="location">
+            <img src="location.png" class="icon" />
+          </h2>
+          <div class="description"></div>
+        </div>
+        <div class="forecast">
+          <div id="next-day" class="next-day">
+            <div id="time"></div>
+            <div id="tomorrow-temp"></div>
+          </div>
+          <div class="next-day">
+            <div id="two-days" class="next-day"></div>
+            <div id="2-day"></div>
+          </div>
+          <div class="next-day">
+            <div id="three-days"></div>
+            <div id="3-day"></div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="col">
+            <img src="humidity.png" />
+            <div>
+              <p class="humidity" id="humid"></p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="wind.png" />
+            <div>
+              <p id="wind" class="wind"></p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <div class="keyboard"></div>
+  </body>
+</html>
